@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { Img } from "../assets/index.js";
+import { Img } from "../../assets/index";
 import {BiMenuAltRight} from 'react-icons/bi'
 
 const Navs = styled.nav`
