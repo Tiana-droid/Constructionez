@@ -1,0 +1,1 @@
+export {default as Img} from '../assets/gilberto-olimpio-RVL_C3WMets-unsplash.jpg'
