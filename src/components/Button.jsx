@@ -11,6 +11,10 @@ const Btn = styled.button`
   color: white;
   border-radius: 20px 0 20px 0;
   box-shadow: 0px 4px 14px 3px rgba(4, 171, 177, 0.3);
+
+  &:hover {
+    background-color: black;
+  }
 `;
 //END OF STYLESHEET
 

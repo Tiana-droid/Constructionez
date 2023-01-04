@@ -1,8 +1,8 @@
-import {React, useEffect, useState} from "react";
+import React from "react";
 import styled from "styled-components";
 import Button from "./Button";
-import { Img } from "../assets/index.js";
-import {BiMenuAltRight} from 'react-icons/bi'
+import Counter from "./Counter";
+import Nav from "./Nav";
 
 //STYLESHEET
 const Header = styled.div`
@@ -48,57 +48,6 @@ const NavBar = styled.div`
     margin-top: 50px;
   }
 
-  & nav {
-    background-image: url(${Img});
-    border-radius: 2px 2px 2px 255px;
-    height: 70vh;
-    width: 100%;
-    color: white;
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1em;
-    margin-top: 10px;
-
-    & .menu {
-      display: none;
-
-      @media (max-width: 685px) {
-        display: block;
-        font-weight: 500;
-        font-size: 27px;
-        position: absolute;
-        top: 1%;
-        color: black;
-        right: 6%;
-      }
-    }
-
-
-    & ul {
-      width: 80%;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      list-style-type: none;
-      justify-content: space-between;
-      align-items: center;
-      padding-inline-start: 0px;
-      font-weight: 700;
-
-      @media (max-width: 685px) {
-        display: none;
-        font-weight: 500;
-      }
-      @media (max-width: 830px) {
-        width: 96%;
-        margin: 15px auto 0px auto;
-      }
-    }
-  }
   & .back {
     width: 70px;
     height: 50vh;
@@ -124,26 +73,13 @@ const Butn = styled.button`
   border: 1px solid rgba(4, 171, 177, 1);
   border-radius: 20px 0 20px 0;
   background-color: white;
-`;
-const Counter = styled.div`
-  width: 70%;
-  display: flex;
-  // margin: auto;
-  gap: 1em;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 20%;
-  flex-wrap: wrap;
 
-  & h4 {
-    margin-block-end: 8px;
-    font-size: 20px;
-  }
-
-  & span {
-    color: grey;
+  &:hover {
+    border: 1px solid black;
+    color: black;
   }
 `;
+
 const Buzz = styled.div`
   width: 100%;
   gap: 3em;
@@ -172,47 +108,7 @@ const Buzz = styled.div`
 //END OF STYLESHEET
 
 const Head = () => {
-const [pCounter, setCounter] = useState(24000)
 
-useEffect(() => {
-  if (pCounter > 0 && pCounter <= 25355) {
-    const interval = setInterval(() => {
-      setCounter((pCounter) => pCounter + 1);
-    }, 1)
-    return () => {
-      clearInterval(interval)
-    };
-  }
-
-}, [pCounter])
-
-const [bCounter, setBCounter] = useState(14000)
-
-useEffect(() => {
-  if (bCounter > 0 && bCounter <= 15199) {
-    const interval = setInterval(() => {
-      setBCounter((bCounter) => bCounter + 1);
-    }, 1)
-    return () => {
-      clearInterval(interval)
-    };
-  }
-
-}, [bCounter])
-
-const [eCounter, setECounter] = useState(0)
-
-useEffect(() => {
-  if (eCounter >= 0 && eCounter <= 349) {
-    const interval = setInterval(() => {
-      setECounter((eCounter) => eCounter + 1);
-    }, 10)
-    return () => {
-      clearInterval(interval)
-    };
-  }
-
-}, [eCounter])
 
   return (
     <>
@@ -233,32 +129,10 @@ useEffect(() => {
                 <Button />
                 <Butn>Contact Us</Butn>
               </div>
-              <Counter>
-                <div className="project-done">
-                  <h4 style={{ color: "orange" }}>{pCounter}</h4>
-                  <span>Project Done</span>
-                </div>
-                <div className="building-done">
-                  <h4 style={{ color: "rgba(4, 171, 177, 1)" }}>{bCounter}</h4>
-                  <span>Building Done</span>
-                </div>
-                <div className="total">
-                  <h4 style={{ color: "green" }}>{eCounter}+</h4>
-                  <span>Total Employees</span>
-                </div>
-              </Counter>
-              
+              <Counter/>
             </div>
           </div>
-          <nav>
-            <BiMenuAltRight className="menu"/>
-            <ul>
-              <li>Home</li>
-              <li>About us</li>
-              <li>Services</li>
-              <li>Project</li>
-            </ul>
-          </nav>
+          <Nav/>
         </NavBar>
           <Buzz>
                 <h4>CHASE</h4>

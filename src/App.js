@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import './App.css';
-import Head from './components/Head'
+import Home from './views/Home';
+import {Routes, Route } from "react-router-dom";
 
 const Container = styled.div`
   width: 97%;
@@ -14,7 +15,9 @@ function App() {
   return (
     <>
     <Container>
-      <Head/>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+      </Routes>
     </Container>
     </>
   );
