@@ -1,4 +1,4 @@
-import React from "react";
+import {React, useEffect, useState} from "react";
 import styled from "styled-components";
 import Button from "./Button";
 import { Img } from "../assets/index.js";
@@ -172,6 +172,48 @@ const Buzz = styled.div`
 //END OF STYLESHEET
 
 const Head = () => {
+const [pCounter, setCounter] = useState(24000)
+
+useEffect(() => {
+  if (pCounter > 0 && pCounter <= 25355) {
+    const interval = setInterval(() => {
+      setCounter((pCounter) => pCounter + 1);
+    }, 1)
+    return () => {
+      clearInterval(interval)
+    };
+  }
+
+}, [pCounter])
+
+const [bCounter, setBCounter] = useState(14000)
+
+useEffect(() => {
+  if (bCounter > 0 && bCounter <= 15199) {
+    const interval = setInterval(() => {
+      setBCounter((bCounter) => bCounter + 1);
+    }, 1)
+    return () => {
+      clearInterval(interval)
+    };
+  }
+
+}, [bCounter])
+
+const [eCounter, setECounter] = useState(0)
+
+useEffect(() => {
+  if (eCounter >= 0 && eCounter <= 349) {
+    const interval = setInterval(() => {
+      setECounter((eCounter) => eCounter + 1);
+    }, 10)
+    return () => {
+      clearInterval(interval)
+    };
+  }
+
+}, [eCounter])
+
   return (
     <>
       <Header>
@@ -193,15 +235,15 @@ const Head = () => {
               </div>
               <Counter>
                 <div className="project-done">
-                  <h4 style={{ color: "orange" }}>25,356</h4>
+                  <h4 style={{ color: "orange" }}>{pCounter}</h4>
                   <span>Project Done</span>
                 </div>
                 <div className="building-done">
-                  <h4 style={{ color: "rgba(4, 171, 177, 1)" }}>15,200</h4>
+                  <h4 style={{ color: "rgba(4, 171, 177, 1)" }}>{bCounter}</h4>
                   <span>Building Done</span>
                 </div>
                 <div className="total">
-                  <h4 style={{ color: "green" }}>350+</h4>
+                  <h4 style={{ color: "green" }}>{eCounter}+</h4>
                   <span>Total Employees</span>
                 </div>
               </Counter>
