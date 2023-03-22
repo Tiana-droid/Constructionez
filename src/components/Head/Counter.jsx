@@ -18,7 +18,8 @@ const CounterCss = styled.div`
   }
 
   & span {
-    color: grey;
+    color: #a4a4a4;
+    font-weight: 600;
   }
 `;
 
@@ -68,15 +69,15 @@ useEffect(() => {
     <>
     <CounterCss>
                 <div className="project-done">
-                  <h4 style={{ color: "orange" }}>{pCounter}</h4>
+                  <h4 style={{ color: "#fb832e" }}>{pCounter}</h4>
                   <span>Project Done</span>
                 </div>
                 <div className="building-done">
-                  <h4 style={{ color: "rgba(4, 171, 177, 1)" }}>{bCounter}</h4>
+                  <h4 style={{ color: "#18a7b6" }}>{bCounter}</h4>
                   <span>Building Done</span>
                 </div>
                 <div className="total">
-                  <h4 style={{ color: "green" }}>{eCounter}+</h4>
+                  <h4 style={{ color: "#4fae2a" }}>{eCounter}+</h4>
                   <span>Total Employees</span>
                 </div>
               </CounterCss>

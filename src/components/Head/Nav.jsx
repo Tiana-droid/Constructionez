@@ -1,60 +1,64 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { Img } from "../../assets/index";
-import {BiMenuAltRight} from 'react-icons/bi'
+import { BiMenuAltRight } from "react-icons/bi";
 
 const Navs = styled.nav`
-background-image: url(${Img});
-border-radius: 2px 2px 2px 255px;
-height: 70vh;
-width: 100%;
-color: white;
-background-position: center;
-background-size: cover;
-display: flex;
-flex-direction: column;
-align-items: center;
-flex-wrap: wrap;
-gap: 1em;
-margin-top: 10px;
-
-& .menu {
-  display: none;
-
-  @media (max-width: 685px) {
-    display: block;
-    font-weight: 500;
-    font-size: 27px;
-    position: absolute;
-    top: 1%;
-    color: black;
-    right: 6%;
-  }
-}
-
-
-& ul {
-  width: 80%;
+  width: 100%;
+  height: 70px;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  list-style-type: none;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  padding-inline-start: 0px;
-  font-weight: 700;
+  flex-wrap: wrap;
+  gap: 1em;
+  color: black;
 
-  @media (max-width: 685px) {
+  @media (max-width: 950px) {
+      align-items: flex-end;
+      justify-content: center;
+    }
+
+  & .menu {
     display: none;
+
+    @media (max-width: 950px) {
+      display: block;
+      font-weight: 500;
+      font-size: 34px;
+      color: black;
+      height: 70px;
+    margin-top: 7px;
+    }
+  }
+
+  & ul {
+    width: 94%;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline-start: 0px;
     font-weight: 500;
+
+    @media (max-width: 950px) {
+      display: none;
+    }
+
+    & li {
+      & a {
+        color: black;
+        text-decoration: none;
+        
+        &:hover {
+          padding-bottom: 4px;
+          border-bottom: 2px solid #18a7b6;
+        }
+      }
+    }
   }
-  @media (max-width: 830px) {
-    width: 96%;
-    margin: 15px auto 0px auto;
-  }
-}
-`
+`;
 
 const Nav = () => {
   return (
@@ -63,11 +67,20 @@ const Nav = () => {
         <BiMenuAltRight className="menu" />
         <ul>
           <li>
-            <Link to="Home">Home</Link>
+            <Link to="/">Home</Link>
           </li>
-          <li>About us</li>
-          <li>Services</li>
-          <li>Project</li>
+          <li>
+            <Link to="/about">About Us</Link>
+          </li>
+          <li>
+            <a href="#services">Services</a>
+          </li>
+          <li>
+            <Link to="/projects">Projects</Link>
+          </li>
+          <li>
+            <Link to="/contact">Contact Us</Link>
+          </li>
         </ul>
       </Navs>
     </>
