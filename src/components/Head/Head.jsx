@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Navbar from "./Navbar";
 import Button from "./Button";
 import Counter from "./Counter";
+import { Link } from "react-router-dom";
 import { Img } from "../../assets/index";
 
 //STYLESHEET
@@ -39,25 +40,24 @@ const Sect = styled.div`
     @media (min-height: 950px) {
       height: 70vh;
     }
-
   }
 
   & .back {
-      width: 70px;
-      height: 45vh;
-      background-color: rgba(129, 188, 229, 0.4);
-      position: absolute;
-      z-index: -6;
-      right: 1.7%;
-      border-radius: 0px 70px 70px 0px;
-      margin-top: -3em;
+    width: 70px;
+    height: 45vh;
+    background-color: rgba(129, 188, 229, 0.4);
+    position: absolute;
+    z-index: -6;
+    right: 1.7%;
+    border-radius: 0px 70px 70px 0px;
+    margin-top: -3em;
 
-      @media (max-width: 750px) {
-        background-color: rgba(4, 171, 177, 0.1);
-        height: 60vh;
-        margin-top: 3em;
-      }
+    @media (max-width: 750px) {
+      background-color: rgba(4, 171, 177, 0.1);
+      height: 60vh;
+      margin-top: 3em;
     }
+  }
 
   & .cta {
     /* margin-top: 2em; */
@@ -86,6 +86,26 @@ const Sect = styled.div`
       // margin: auto;
       padding-left: 16px;
       margin-top: 50px;
+
+      #Butn {
+        width: 100%;
+        height: 30px;
+        padding: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        border: 1px solid #18a7b6;
+        border-radius: 20px 0 20px 0;
+        background-color: white;
+        cursor: pointer;
+        color: #18a7b6;
+
+        &:hover {
+          border: 1px solid black;
+          color: black;
+        }
+      }
     }
   }
 `;
@@ -113,26 +133,6 @@ const Buzz = styled.div`
     margin: auto;
   }
 `;
-const Butn = styled.a`
-  width: 100%;
-  height: 30px;
-  padding: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  border: 1px solid #18a7b6;
-  border-radius: 20px 0 20px 0;
-  background-color: white;
-  cursor: pointer;
-  color: #18a7b6;
-  
-  &:hover {
-    border: 1px solid black;
-    color: black;
-  }
-
-`;
 //END OF STYLESHEET
 
 const Head = () => {
@@ -153,13 +153,15 @@ const Head = () => {
             <div className="btn">
               <Button />
 
-              <Butn href="/contact"> Contact Us</Butn>
-            <div className="back"></div>
+              <Link to="/contact" id="Butn">
+                {" "}
+                Contact Us
+              </Link>
+              <div className="back"></div>
             </div>
             <Counter />
           </div>
-          <div className="img">
-          </div>
+          <div className="img"></div>
         </Sect>
         <Buzz>
           <h4>CHASE</h4>
