@@ -168,6 +168,8 @@ export const Input = styled.div`
     height: 30px;
     border-radius: 5px;
     padding-left: 9px;
+    outline: none;
+    border: 2px solid #ececec;
 
     &:focus-visible {
       border: 2px solid #18a7b6 !important;
