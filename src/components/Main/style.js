@@ -39,7 +39,7 @@ export const Bottom = styled(Top)`
   & .img {
     background-image: url(${Img2});
     border-radius: 2px 255px 2px 2px;
-    height: 85vh;
+    height: 600px;
     color: white;
     background-position: center;
     background-size: cover;
@@ -277,7 +277,7 @@ export const OuterDiv = styled(GridContainer)`
   #star {
     margin-top: 3em;
     width: 30% !important;
-    height: 10vh;
+    height: 56px;
 
     @media (max-width: 900px) {
       width: 50% !important;

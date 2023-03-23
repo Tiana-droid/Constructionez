@@ -38,7 +38,7 @@ const Sect = styled.div`
     }
 
     @media (min-height: 950px) {
-      height: 70vh;
+      height: 54vh;
     }
   }
 

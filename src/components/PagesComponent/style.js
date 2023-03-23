@@ -54,7 +54,7 @@ export const MainImage = styled.div`
 
   & img {
     width: 100%;
-    height: 60vh;
+    height: 417px;
 
     @media (max-width: 700px) {
       width: 100%;
