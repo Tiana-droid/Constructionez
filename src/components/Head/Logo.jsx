@@ -12,6 +12,7 @@ display: flex;
     font-size: 15px;
     color: #18a7b6;
     margin-bottom: 10%;
+    letter-spacing: 1.5px;
   }
 
   & a {

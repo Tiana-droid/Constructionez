@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { Details } from "./details";
 import { Mission, TabContainer, TabPanel } from "../../views/style";
 import {
@@ -61,13 +62,13 @@ const Warehouse = () => {
         })}
         <TabContainer>
           <TabPanel>
-            <a href="/projects/resident">Resident Projects</a>
+            <Link to="/projects/resident">Resident Projects</Link>
           </TabPanel>
           <TabPanel>
-            <a href="/projects/industrial">Industrial Projects</a>
+            <Link to="/projects/industrial">Industrial Projects</Link>
           </TabPanel>
           <TabPanel>
-            <a href="/projects/warehouse">Warehouse Projects</a>
+            <Link to="/projects/warehouse">Warehouse Projects</Link>
           </TabPanel>
         </TabContainer>
       </Container>

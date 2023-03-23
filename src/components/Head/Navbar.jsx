@@ -19,13 +19,15 @@ const NavBar = styled.div`
 const NavBar2 = styled(NavBar)`
   width: 96%;
   margin: auto;
-  padding: 0px 6.5px;
   transition: 0.8s;
   z-index: 1;
   background-color: #18a7b6;
   border: none;
   position: fixed;
 
+  h3 {
+    padding-left: 9px;
+  }
   h3,
   a,
   & .menu {

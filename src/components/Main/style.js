@@ -198,40 +198,25 @@ export const GridContainer = styled.div`
     margin-top: 2em;
     padding-bottom: 20px;
 
-    & a {
-      font-size: 18px;
-      color: #18a7b6;
-      opacity: 0.7;
-      font-weight: 500;
-
-      &:hover {
-        color: #000;
-      }
-    }
-
-    & button {
+    a {
       border: 2px solid #18a7b6;
       outline: none;
-      border-radius: 10px;
+      border-radius: 20px;
       background-color: white;
-      width: 100%;
-      height: 30px;
+      width: 90%;
+      height: 10px;
       display: flex;
       padding: 19px;
       cursor: pointer;
       justify-content: center;
       align-items: center;
+      font-size: 15px;
+      font-weight: 300;
+      text-decoration: none;
+      color: black;
 
       &:hover {
         background-color: #18a7b6;
-        color: white;
-      }
-
-      a {
-        font-size: 14px;
-        font-weight: 300;
-        text-decoration: none;
-        color: black;
       }
     }
   }

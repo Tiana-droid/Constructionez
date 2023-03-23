@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Container, Text, Grid, GridContainer, ToolTip } from "./style";
 import { FiMoreVertical } from "react-icons/fi";
 import { FaStar } from "react-icons/fa";
@@ -33,10 +34,7 @@ const SectionTwo = () => {
               </div>
             </div>
             <div className="footer">
-              <button>
-                {" "}
-                <a href="/projects/resident">View Projects</a>{" "}
-              </button>
+                <Link to="/projects/resident">View Projects</Link>
             </div>
           </GridContainer>
           <GridContainer>
@@ -57,10 +55,7 @@ const SectionTwo = () => {
               </div>
             </div>
             <div className="footer">
-              <button>
-                {" "}
-                <a href="/projects/industrial">View Projects</a>{" "}
-              </button>
+                <Link to="/projects/industrial">View Projects</Link>
             </div>
           </GridContainer>
           <GridContainer>
@@ -81,10 +76,7 @@ const SectionTwo = () => {
               </div>
             </div>
             <div className="footer">
-              <button>
-                {" "}
-                <a href="/projects/warehouse">View Projects</a>{" "}
-              </button>
+                <Link to="/projects/warehouse">View Projects</Link>
             </div>
           </GridContainer>
         </Grid>
