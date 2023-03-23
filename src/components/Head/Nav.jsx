@@ -66,7 +66,7 @@ const Wrapper = styled.div`
   width: 100%;
   height: 100vh;
   position: absolute;
-  top: 10%;
+  top: 100%;
   z-index: 100;
 
   @media (min-width: 950px) {
@@ -79,20 +79,20 @@ const SideNav = styled(Navs)`
   float: right;
   flex-direction: row;
   align-items: flex-start;
+  border-right: 6px solid #18a7b6;
   justify-content: flex-end;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-right: 4px solid #18a7b6;
+  background-color: rgba(255, 255, 255, 0.98);
   box-shadow: 0px 4px 4px #d1d1d1;
 
   .close {
-    height: 50px;
+    height: 30px;
+    margin-top: 30px;
   }
 
   ul {
     width: 98%;
-    padding: 0px 18px;
     flex-direction: column;
-    margin-top: -21em;
+    /* margin-top: -14em; */
     height: 30vh;
     align-items: flex-start;
     justify-content: space-between;
@@ -109,8 +109,9 @@ const SideNav = styled(Navs)`
       width: 100%;
       padding-bottom: 4px !important;
       border-bottom: 2px solid #e8e8e8;
-
+      
       a {
+        padding: 0px 10px;
         color: #000 !important;
       }
     }
@@ -149,7 +150,7 @@ const Nav = () => {
       {sideBar && (
         <Wrapper onClick={OnClick}>
           <SideNav>
-            <FaTimes className="close" onClick={OnClick} />
+            {/* <FaTimes className="close" onClick={OnClick} /> */}
             <ul>
               <li>
                 <Link to="/">Home</Link>
