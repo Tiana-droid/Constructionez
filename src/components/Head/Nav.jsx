@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { BiMenuAltRight } from "react-icons/bi";
-import { FaTimes } from "react-icons/fa";
 
 const Navs = styled.nav`
   width: 100%;
@@ -82,7 +81,7 @@ const SideNav = styled(Navs)`
   border-right: 6px solid #18a7b6;
   justify-content: flex-end;
   background-color: rgba(255, 255, 255, 0.98);
-  box-shadow: 0px 4px 4px #d1d1d1;
+  box-shadow: 0px 2px 4px #d1d1d1;
 
   .close {
     height: 30px;
