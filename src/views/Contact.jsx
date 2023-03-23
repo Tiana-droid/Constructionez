@@ -1,6 +1,6 @@
 import React from "react";
 import { NavBar, Footer } from "../components";
-import { OuterNav, Banner, Form, Input, Btn } from "./style";
+import { OuterNav, Banner2, Form, Input, Btn, BackgoundImg } from "./style";
 
 const Contact = () => {
   return (
@@ -8,11 +8,13 @@ const Contact = () => {
       <OuterNav>
         <NavBar />
       </OuterNav>
-      <Banner>
+      <BackgoundImg>
+
+      <Form>
+      <Banner2>
         <h2>CONTACT US</h2>
         <p>Office: No 23, O.T Lo street, Lagos, Nigeria</p>
-      </Banner>
-      <Form>
+      </Banner2>
         <form action="/">
           <Input className="f_name">
             <label htmlFor="">First Name</label>
@@ -69,6 +71,7 @@ const Contact = () => {
           </Btn>
         </form>
       </Form>
+      </BackgoundImg>
 
       <Footer />
     </>

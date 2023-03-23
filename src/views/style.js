@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {  Background2 } from "../assets";
 
 //About us page style starts here
 
@@ -108,16 +109,37 @@ export const Vision = styled(Mission)`
 `;
 
 //Contact Us page style starts here
+export const BackgoundImg = styled.div`
+width: 100%;
+height: 130vh;
+background-image: url(${Background2});
+background-position: left top;
+background-size: cover;
+`
+export const Banner2 = styled(Banner)`
+height: fit-content;
+width: 100%;
+background-color: transparent;
+color: #000 !important;
+margin: auto;
 
+h2 {
+  font-size: 35px;
+}
+
+p {
+  text-align: center;
+}
+`
 export const Form = styled(Content)`
-  width: 50%;
-  margin-top: 3em;
-  background-color: #fbfbfb;
+  width: 40%;
+  background-color: rgba(254, 254, 254, 0.8);
   padding: 20px;
   border-radius: 18px;
+  float: right;
   transition: 4s transform ;
 
-  @media (max-width: 600px) {
+  @media (max-width: 700px) {
     width: 70%;
   }
 
@@ -146,6 +168,10 @@ export const Input = styled.div`
     height: 30px;
     border-radius: 5px;
     padding-left: 9px;
+
+    &:focus-visible {
+      border: 2px solid #18a7b6 !important;
+    }
   }
 
   & textarea {

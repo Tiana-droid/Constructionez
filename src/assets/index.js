@@ -6,5 +6,5 @@ export {default as Img5} from '../assets/viktor-forgacs-lY9vM4rdUwA-unsplash.jpg
 export {default as Pic1} from '../assets/black-businessman-happy-expression.jpg'
 export {default as Pic2} from '../assets/business-man-smiling-portrait.jpg'
 export {default as Pic3} from '../assets/smiling-female-engineer-showing-muscles-holding-helmet-white-background.jpg'
-// export {default as} from ''
+export {default as Background2} from '../assets/damian-zaleski-RYyr-k3Ysqg-unsplash.jpg'
 // export {default as} from ''
